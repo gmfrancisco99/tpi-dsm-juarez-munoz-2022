@@ -6,6 +6,18 @@ import AlbumDetail from './AlbumDetail';
 class AlbumList extends Component {
   state = {photoset: null};
 
+  /* 
+  const getPhotos = async() => {
+    let response;
+    try{
+      response = await axios.get();
+      setPhotos(response.data.photoset.photo);
+    } catch(err) {
+      throw new BadRequestException(err);
+    }
+  }
+  getPhotos();
+  */
   componentWillMount() {
     axios
       .get(
