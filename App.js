@@ -3,26 +3,31 @@ import React from 'react';
 
 import AlbumList from './components/AlbumList';
 import PhotoList from './components/PhotoList';
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
 // Create a component
-export default  App = () => (
-  <NavigationContainer>
-    <Stack.Navigator>
-      <Stack.Screen
-        name="albumList"
-        component={AlbumList}
-        options={{title: 'Albums'}}
-      />
-      <Stack.Screen
-        name="photoList"
-        component={PhotoList}
-        options={{title: 'Photos'}}
-      />
-    </Stack.Navigator>
-  </NavigationContainer>
-);
 
+// arreglada la definición de App, porque estaba mal definida cuando estaba escrita orientada a objetos.
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="albumList"
+          component={AlbumList}
+          options={{ title: 'Albums' }}
+        />
+        <Stack.Screen
+          name="photoList"
+          component={PhotoList}
+          options={{ title: 'Photos' }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
