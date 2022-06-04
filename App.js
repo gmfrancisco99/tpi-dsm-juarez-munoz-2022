@@ -18,7 +18,7 @@ function App() {
         <Stack.Screen
           name="albumList"
           component={AlbumList}
-          options={{ title: 'Albums' }}
+          options={{ title: 'Albums', }}
         />
         <Stack.Screen
           name="photoList"

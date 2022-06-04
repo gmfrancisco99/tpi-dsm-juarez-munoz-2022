@@ -38,7 +38,7 @@ const AlbumList = (props) => {
     (!photoset ?
       <Text>Loading...</Text>
       :
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, backgroundColor: '#f0f8ff' }}> //fondo
         <ScrollView>{renderAlbums()}</ScrollView>
       </View>
     )

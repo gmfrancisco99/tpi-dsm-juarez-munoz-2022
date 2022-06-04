@@ -38,7 +38,7 @@ class PhotoList extends Component {
     }
 
     return (
-      <View style={{flex: 1}}>
+      <View style={{flex: 1, backgroundColor: '#0000ff'}}> //azul
         <ScrollView>{this.renderAlbums()}</ScrollView>
       </View>
     );
