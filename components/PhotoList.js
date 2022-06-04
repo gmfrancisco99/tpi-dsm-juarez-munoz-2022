@@ -2,6 +2,7 @@ import React, { Component, useEffect, useState } from 'react';
 import { ScrollView, Text, View } from 'react-native';
 import axios from 'axios';
 import PhotoDetail from './PhotoDetail';
+import { FlatList } from 'react-native-gesture-handler';
 
 const PhotoList = (props) => {
 
@@ -23,14 +24,14 @@ const PhotoList = (props) => {
     getPhotos();
   }, []);
 
-  function renderAlbums() {
-    return photos.map((photo) => (
+  const renderAlbums = ({item}) => {
+    return(
       <PhotoDetail
-        key={photo.title}
-        title={photo.title}
-        imageUrl={`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`}
+        key={item.title}
+        title={item.title}
+        imageUrl={`https://farm${item.farm}.staticflickr.com/${item.server}/${item.id}_${item.secret}.jpg`}
       />
-    ));
+    );
   }
 
   return (
@@ -40,7 +41,11 @@ const PhotoList = (props) => {
       </View>
       :
       <View style={{ flex: 1 }}>
-        <ScrollView>{renderAlbums()}</ScrollView>
+        <FlatList
+          data={photos}
+          renderItem={renderAlbums}
+          keyExtractor={item => item.title}
+        />
       </View>
   )
 }
