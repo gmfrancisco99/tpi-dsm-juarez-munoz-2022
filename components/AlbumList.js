@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ScrollView, Text, View } from 'react-native';
 import axios from 'axios';
 import AlbumDetail from './AlbumDetail';
+import { FlatList } from 'react-native-gesture-handler';
 
 
 
@@ -23,26 +24,31 @@ const AlbumList = (props) => {
     getPhotos();
   }, []);
 
-  function renderAlbums() {
-    return photoset.map((album) => (
+  const renderAlbums = ({ item }) => {
+    return (
       <AlbumDetail
         navigation={props.navigation}
-        key={album.id}
-        title={album.title._content}
-        albumId={album.id}
+        key={item.id}
+        title={item.title._content}
+        albumId={item.id}
       />
-    ));
+    )
   }
+
 
   return (
     (!photoset ?
       <Text>Loading...</Text>
       :
-      <View style={{ flex: 1, backgroundColor: '#f0f8ff' }}> //fondo
-        <ScrollView>{renderAlbums()}</ScrollView>
+      <View style={{ flex: 1, backgroundColor: '#edfbf3' }}>
+        <FlatList
+          data={photoset}
+          renderItem={renderAlbums}
+          keyExtractor={item => item.id}
+        />
       </View>
     )
   )
-}
 
+}
 export default AlbumList;

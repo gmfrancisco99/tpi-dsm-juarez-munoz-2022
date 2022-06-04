@@ -12,22 +12,46 @@ const Stack = createStackNavigator();
 
 // arreglada la definición de App, porque estaba mal definida cuando estaba escrita orientada a objetos.
 function App() {
+  const { headerStyle, headerTintColor, headerTitleStyle } = style;
   return (
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
           name="albumList"
           component={AlbumList}
-          options={{ title: 'Albums', }}
+          options={
+            {
+              title: 'Albums',
+              headerStyle,
+              headerTintColor,
+              headerTitleStyle
+            }
+          }
         />
         <Stack.Screen
           name="photoList"
           component={PhotoList}
-          options={{ title: 'Photos' }}
+          options={
+            {
+              title: 'Photos',
+              headerStyle,
+              headerTintColor,
+              headerTitleStyle
+            }
+          }
         />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
 
+const style = {
+  headerStyle: {
+    backgroundColor: '#ba5a31'
+  },
+  headerTintColor: '#edfbf3',
+  headerTitleStyle: {
+    fontWeight: 'bold'
+  }
+}
 export default App;
