@@ -32,7 +32,7 @@ const styles = {
   headerContentStyle: {
     // flexDirection: 'column',
     justifyContent: 'space-around',
-    backgroundColor: '#000000' //negro
+    backgroundColor: '#000000' //negro,
   },
   headerTextStyle: {
     fontSize: 18,

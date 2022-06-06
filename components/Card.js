@@ -11,13 +11,23 @@ const Card = (props) => {
 
 const styles = {
   containerStyle: {
-    justifyContent: 'center',
+    height: 200,
+    width: 300,
     alignItems: 'center',
-    flexDirection: 'row',
-    flex: 1/3,
-    backgroundColor: 'black',
-    borderColor: '#ddd',
-    borderBottomWidth: 6,
+    justifyContent: 'center',
+    backgroundColor:'white',
+    borderRadius: 15,
+    shadowColor: 'black',
+    shadowOffset: {width: 0, height: 0},
+    shadowOpacity: 1,
+    shadowRadius: 8,
+    elevation: 8,
+    justifyContent: 'space-between',
+    paddingLeft: 16,
+    paddingRight: 14,
+    marginTop: 6,
+    marginBottom: 6,
+    marginLeft: 30,
   }
 };
 

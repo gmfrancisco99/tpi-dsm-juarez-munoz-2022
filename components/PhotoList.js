@@ -36,15 +36,16 @@ const PhotoList = (props) => {
 
   return (
     !photos ?
-      <View>
+      <View style={{ flex: 1 }}>
         <Text>Loading...</Text>
       </View>
       :
-      <View >
+      <View style={{ flex: 1 }}>
         <FlatList
           data={photos}
           renderItem={renderAlbums}
           keyExtractor={item => item.title}
+          numColumns={3}
         />
       </View>
   )

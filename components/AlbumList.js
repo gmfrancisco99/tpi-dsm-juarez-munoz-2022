@@ -40,11 +40,12 @@ const AlbumList = (props) => {
     (!photoset ?
       <Text>Loading...</Text>
       :
-      <View style={{ backgroundColor: '#edfbf3' }}>
+      <View style={{ backgroundColor: '#edfbf3', flex: 1 }}>
         <FlatList
           data={photoset}
           renderItem={renderAlbums}
           keyExtractor={item => item.id}
+          numColumns={3}
         />
       </View>
     )
