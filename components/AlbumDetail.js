@@ -18,7 +18,7 @@ const AlbumDetail = ({ navigation, title, albumId }) => {
         </View>
       </CardSection>
 
-      <CardSection >
+      <CardSection>
         <Button
           onPress={() => navigation.navigate('photoList', { albumId: albumId })}>
           See Now!
@@ -30,7 +30,7 @@ const AlbumDetail = ({ navigation, title, albumId }) => {
 
 const styles = {
   headerContentStyle: {
-    flexDirection: 'column',
+    // flexDirection: 'column',
     justifyContent: 'space-around',
     backgroundColor: '#000000' //negro
   },

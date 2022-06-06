@@ -11,8 +11,6 @@ const PhotoDetail = ({ title, imageUrl }) => {
     thumbnailContainerStyle,
     headerTextStyle,
     imageStyle,
-    buttonStyle,
-    textButtonStyle
   } = styles;
 
   return (
@@ -32,7 +30,7 @@ const PhotoDetail = ({ title, imageUrl }) => {
 
       <CardSection>
         <Button  onPress={() => Linking.openURL(imageUrl)}>
-          <Text style={textButtonStyle}>See Now!</Text>
+          <Text> See Now!</Text>
         </Button>
       </CardSection>
     </Card>
@@ -41,7 +39,7 @@ const PhotoDetail = ({ title, imageUrl }) => {
 
 const styles = {
   headerContentStyle: {
-    flexDirection: 'column',
+     flexDirection: 'column',
     justifyContent: 'space-around',
     backgroundColor: '#7fff00' //verde
   },
@@ -60,26 +58,10 @@ const styles = {
     marginRight: 10,
   },
   imageStyle: {
-    height: 300,
-    flex: 1,
-    width: null,
+    height: 50,
+
+    width: 50,
   },
-  buttonStyle: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 4,
-    elevation: 3,
-    backgroundColor: 'black',
-  },
-  textButtonStyle: {
-    fontSize: 16,
-    lineHeight: 21,
-    fontWeight: 'bold',
-    letterSpacing: 0.25,
-    color: 'black',
-  }
 };
 
 export default PhotoDetail;
