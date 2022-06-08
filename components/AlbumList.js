@@ -24,6 +24,8 @@ const AlbumList = (props) => {
     getPhotos();
   }, []);
 
+  const mintcream='#edfbf3'
+
   const renderAlbums = ({ item }) => {
     return (
       <AlbumDetail
@@ -35,19 +37,15 @@ const AlbumList = (props) => {
     )
   }
 
-
   return (
     (!photoset ?
       <Text>Loading...</Text>
       :
-      <View style={{ backgroundColor: '#edfbf3', flex: 1 }}>
+      <View style={{ backgroundColor: mintcream}}>
         <FlatList
           data={photoset}
           renderItem={renderAlbums}
           keyExtractor={item => item.id}
-          contentContainerStyle={{
-            alignItems: 'flex-start'
-          }}
         />
       </View>
     )
