@@ -45,7 +45,9 @@ const AlbumList = (props) => {
           data={photoset}
           renderItem={renderAlbums}
           keyExtractor={item => item.id}
-          numColumns={3}
+          contentContainerStyle={{
+            alignItems: 'flex-start'
+          }}
         />
       </View>
     )

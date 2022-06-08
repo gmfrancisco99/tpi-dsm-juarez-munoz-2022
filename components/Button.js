@@ -25,6 +25,7 @@ const styles = {
     borderRadius: 4,
     elevation: 3,
     backgroundColor: '#ba5a31',
+    margin: 10
   }
 };
 

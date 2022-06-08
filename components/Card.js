@@ -11,8 +11,8 @@ const Card = (props) => {
 
 const styles = {
   containerStyle: {
-    height: 200,
-    width: 300,
+    height: 355,
+    width: 341,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor:'white',
@@ -25,8 +25,9 @@ const styles = {
     justifyContent: 'space-between',
     paddingLeft: 16,
     paddingRight: 14,
-    marginTop: 6,
-    marginBottom: 6,
+    paddingTop: 15,
+    marginTop: 20,
+    marginBottom: 20,
     marginLeft: 30,
   }
 };

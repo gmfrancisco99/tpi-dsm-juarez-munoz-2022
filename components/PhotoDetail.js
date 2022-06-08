@@ -39,7 +39,7 @@ const PhotoDetail = ({ title, imageUrl }) => {
 
 const styles = {
   headerContentStyle: {
-     flexDirection: 'column',
+    flexDirection: 'row',
     justifyContent: 'space-around',
     backgroundColor: '#7fff00' //verde
   },
@@ -52,15 +52,14 @@ const styles = {
     width: 50,
   },
   thumbnailContainerStyle: {
-    justifyContent: 'center',
+    ustifyContent: 'center',
     alignItems: 'center',
     marginLeft: 10,
     marginRight: 10,
   },
   imageStyle: {
-    height: 50,
-
-    width: 50,
+    height: 180,
+    width: 320,
   },
 };
 

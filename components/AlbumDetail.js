@@ -30,13 +30,12 @@ const AlbumDetail = ({ navigation, title, albumId }) => {
 
 const styles = {
   headerContentStyle: {
-    // flexDirection: 'column',
+    flexDirection: 'column',
     justifyContent: 'space-around',
-    backgroundColor: '#000000' //negro,
   },
   headerTextStyle: {
     fontSize: 18,
-    color: '#dc143c'
+    color: '#0c0c0c',
   }
 };
 
