@@ -1,4 +1,5 @@
 Integrantes: 
+
 | Nombre y Apellido | Legajo |
 | --- | --- |
 | Gastón Muñoz | 80384 |
