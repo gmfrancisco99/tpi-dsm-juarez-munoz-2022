@@ -5,6 +5,7 @@ import AlbumList from './components/AlbumList';
 import PhotoList from './components/PhotoList';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import Colors from './components/Colors';
 
 const Stack = createStackNavigator();
 
@@ -47,10 +48,11 @@ function App() {
 
 const style = {
   headerStyle: {
-    backgroundColor: '#ba5a31'
+    backgroundColor: Colors.sinopia
   },
-  headerTintColor: '#edfbf3',
+  headerTintColor: Colors.mintcream,
   headerTitleStyle: {
+    fontSize: 18,
     fontWeight: 'bold'
   }
 }

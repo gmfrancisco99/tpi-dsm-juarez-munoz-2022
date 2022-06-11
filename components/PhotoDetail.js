@@ -3,9 +3,11 @@ import { Text, View, Image, Linking } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
 import Button from './Button';
+import Colors from './Colors';
 
 const PhotoDetail = ({ title, imageUrl }) => {
   const {
+    cardStyle,
     thumbnailStyle,
     headerContentStyle,
     thumbnailContainerStyle,
@@ -14,8 +16,8 @@ const PhotoDetail = ({ title, imageUrl }) => {
   } = styles;
 
   return (
-    <Card>
-      <CardSection>
+    <Card style={cardStyle}>
+      <CardSection style={{flexDirection: 'row', flex: 1}}> 
         <View style={thumbnailContainerStyle}>
           <Image style={thumbnailStyle} source={{ uri: imageUrl }} />
         </View>
@@ -24,11 +26,11 @@ const PhotoDetail = ({ title, imageUrl }) => {
         </View>
       </CardSection>
 
-      <CardSection>
+      <CardSection style={{flex: 5}}>
         <Image style={imageStyle} source={{ uri: imageUrl }} />
       </CardSection>
 
-      <CardSection>
+      <CardSection style={{flex:1}}>
         <Button  onPress={() => Linking.openURL(imageUrl)}>
           <Text> See Now!</Text>
         </Button>
@@ -38,28 +40,33 @@ const PhotoDetail = ({ title, imageUrl }) => {
 };
 
 const styles = {
+  cardStyle: {
+    height: '100%',
+    width: '30%',
+    marginTop: 5
+  },
   headerContentStyle: {
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    backgroundColor: '#7fff00' //verde
+    flexDirection: 'row',
+    flex: 3,
+    justifyContent: 'flex-start',
+    alignItems: 'center'
   },
   headerTextStyle: {
-    fontSize: 18,
-    color: '#8b008b' //violeta
+    fontSize: 15,
+    color: Colors.richBlack //violeta
   },
   thumbnailStyle: {
-    height: 50,
-    width: 50,
+    height: '100%',
+    width: '100%'
   },
   thumbnailContainerStyle: {
+    flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    marginLeft: 10,
-    marginRight: 10,
+    alignItems: 'flex-start'
   },
   imageStyle: {
     height: 180,
-    width: 320,
+    width: '100%',
   },
 };
 

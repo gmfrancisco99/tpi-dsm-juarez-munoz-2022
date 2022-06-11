@@ -3,7 +3,7 @@ import { ScrollView, Text, View } from 'react-native';
 import axios from 'axios';
 import AlbumDetail from './AlbumDetail';
 import { FlatList } from 'react-native-gesture-handler';
-
+import Colors from './Colors';
 
 
 const AlbumList = (props) => {
@@ -24,8 +24,6 @@ const AlbumList = (props) => {
     getPhotos();
   }, []);
 
-  const mintcream='#edfbf3'
-
   const renderAlbums = ({ item }) => {
     return (
       <AlbumDetail
@@ -38,17 +36,16 @@ const AlbumList = (props) => {
   }
 
   return (
-    (!photoset ?
-      <Text>Loading...</Text>
-      :
-      <View style={{ backgroundColor: mintcream}}>
-        <FlatList
-          data={photoset}
-          renderItem={renderAlbums}
-          keyExtractor={item => item.id}
-        />
-      </View>
-    )
+    <View style={{ backgroundColor: Colors.mintcream }}>
+      <FlatList
+        data={photoset}
+        renderItem={renderAlbums}
+        keyExtractor={item => item.id}
+        ListEmptyComponent={
+          <Text>Loading...</Text>
+        }
+      />
+    </View>
   )
 
 }

@@ -1,9 +1,10 @@
 import React from 'react';
 import { View } from 'react-native';
+import Colors from './Colors';
 
 const Card = (props) => {
   return (
-    <View style={styles.containerStyle}>
+    <View style={[styles.containerStyle, props.style]}>
       {props.children}
     </View>
   );
@@ -11,19 +12,14 @@ const Card = (props) => {
 
 const styles = {
   containerStyle: {
-    backgroundColor:'white',  
-    borderRadius: 15,
-    shadowColor: 'black',
-    shadowOffset: {width: 1, height: 2},
-    shadowOpacity: 1,
-    shadowRadius: 8,
+    backgroundColor: Colors.white,  
+    borderRadius: 5,
+    borderWidth: 2,
+    borderColor: Colors.crayola,
     elevation: 8,
-    paddingLeft: 16,
-    paddingRight: 14,
-    paddingTop: 15,
-    marginTop: 20,
-    marginBottom: 20,
-    marginLeft: 30,
+    // paddingLeft: 16,
+    // paddingRight: 14,
+    // paddingTop: 15
   }
 };
 
